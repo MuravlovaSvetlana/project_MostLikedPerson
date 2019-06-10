@@ -1,0 +1,45 @@
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.length_1 {
+    width: 100%;
+}
+
+.length_2 {
+    height: stretch;
+    width: 100%;
+}
+
+.length_3 {
+    height: stretch;
+}
+
+.length_more {
+    height: stretch;
+}
+
+.picture_info {
+    position: absolute;
+    display: none;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 17px;
+    padding: 5px;
+    color: #fff;
+    background-color: rgba(0,0,0,.15);
+    transition: all ease 0.5s;
+}
+
+.picture_info span, span i {
+    padding-right: 10px;
+}
+
+.container_img:hover .picture_info {
+    display: block;
+}

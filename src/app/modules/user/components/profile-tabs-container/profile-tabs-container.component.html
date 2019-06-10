@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row tabs_container">    
+    <ng-container [ngSwitch]="activeTab | async">
+      <ng-container *ngSwitchCase="'selfies'">
+        <app-profile-selfies class="col-lg-12" [isCurrentUser]="isCurrentUser" (img)="showImages($event)"></app-profile-selfies>
+      </ng-container>
+      <ng-container *ngSwitchCase="'favourites'">
+        <app-profile-favourites class="col-lg-12" (img)="showImages($event)"></app-profile-favourites>
+      </ng-container>
+      <ng-container *ngSwitchCase="'followers'">
+        <app-profile-followers (chooseFollower)="chooseFollower()" [activeTab]="activeTab | async" class="col-lg-12"></app-profile-followers>
+      </ng-container>
+      <ng-container *ngSwitchCase="'followings'">
+        <app-profile-followers (chooseFollower)="chooseFollower()" [activeTab]="activeTab | async" class="col-lg-12"></app-profile-followers>
+      </ng-container>
+      <ng-container *ngSwitchCase="'my_glories'">
+        <app-profile-my-glories class="col-lg-12"></app-profile-my-glories>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>
+<!--CAROUSEL-->
+<ng-container *ngIf="showCarousel">
+    <app-carousel-picture [carouselId]="carouselId" (closeCarousel)="closeCarousel()"></app-carousel-picture>
+</ng-container>

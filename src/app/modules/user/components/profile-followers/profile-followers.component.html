@@ -1,0 +1,11 @@
+<div class="container_active_tab">
+  <ng-container *ngFor="let member of result?.users">
+      <app-profile-follower-following-item [member]="member"
+      (pressButton)="pressButton($event)"
+      (clickUser)="clickUser($event)"
+      class="col-lg-4 container_follower_item"
+      ></app-profile-follower-following-item>
+  </ng-container>
+</div>
+
+

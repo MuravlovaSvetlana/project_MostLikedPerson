@@ -1,0 +1,28 @@
+.profile-cover {
+  height: 400px;
+  background-color: lightgray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.upload-cover {
+  position: absolute;
+  display: none;
+  color: #e12ebc;
+  background-color: rgba(0,0,0,.65);
+  left: 300px;
+  bottom: 90px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.profile-cover:hover .upload-cover {
+  display: block;
+}
+
+input[type="file"] {
+  display: none;
+}

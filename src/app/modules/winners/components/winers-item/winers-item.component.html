@@ -1,0 +1,12 @@
+<ng-container *ngIf="winner?.member_id.images.length">
+  <ng-container *ngFor="let img of winner?.member_id.images">
+    <div class="winner-item">
+      <span class="name span">{{winner.member_id.user_id.full_name}}</span>
+      <img [appImgLoader]="img.image_basic.url" (click)="showCarousel()">
+      <span class="likes span">{{img.image_basic.likes.length}}</span>
+    </div>
+  </ng-container>
+</ng-container> 
+
+
+

@@ -1,0 +1,23 @@
+.cover_winners {
+    width: 100%;
+    height: 400px;
+    background-image: url('https://img4.goodfon.ru/original/1920x1080/7/20/wooden-background-texture-derevo-pink-rozovyi-tender-floral.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.winners_tittle {
+    display: block;
+    padding-top: 35px;
+    font-size: 70px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.icon_heart i {
+    margin-top: 40px;
+    color: #fff;
+    font-size: 130px;
+}

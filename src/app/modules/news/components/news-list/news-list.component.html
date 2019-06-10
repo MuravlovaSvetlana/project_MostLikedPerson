@@ -1,0 +1,12 @@
+
+    <cdk-virtual-scroll-viewport   (scrolledIndexChange)="onScrollChange($event)" [itemSize]="400" class="scroll-container">
+        <ng-container *cdkVirtualFor="let item of news">
+            <div class="news-list">
+                <app-news-item [item]="item" (carouselImages)="carouselImages($event)" (followUser)="getNews()" class="news-item"></app-news-item>
+            </div>
+        </ng-container>
+    </cdk-virtual-scroll-viewport>
+<!--CAROUSEL-->
+<ng-container *ngIf="showCarousel">
+    <app-carousel-picture [carouselId]="carouselId" (closeCarousel)="closeCarousel()"></app-carousel-picture>
+</ng-container>

@@ -1,0 +1,15 @@
+.picture_item {
+    overflow: hidden;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 3px;
+    position: relative;
+}
+
+.length_3 {
+    width: 33.33%;
+}
+
+.length_2 {
+    width: 50%;
+}

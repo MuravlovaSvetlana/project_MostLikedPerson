@@ -1,0 +1,31 @@
+<div class="container_img">
+    <ng-container *ngIf="length === 1">
+        <img [appImgLoader]="picture?.url || ''"
+             class="length_1"
+             (click)="showCarusel()"
+        >
+    </ng-container>
+    <ng-container *ngIf="length === 2">
+        <img [appImgLoader]="picture?.url || ''" 
+             class="length_2"
+             (click)="showCarusel()"
+        >
+    </ng-container>
+    <ng-container *ngIf="length === 3">
+        <img [appImgLoader]="picture?.url || ''"
+             class="length_3" 
+             (click)="showCarusel()"
+        >
+    </ng-container>
+    <ng-container *ngIf="length > 3">
+        <img [appImgLoader]="picture?.url || ''"
+             class="length_more" 
+             (click)="showCarusel()"
+        >
+    </ng-container>
+    <div class="picture_info">
+        <span><i class="fas fa-heart"></i>{{picture?.likes.length}}</span>
+        <span><i class="fas fa-eye"></i>{{picture?.views.length}}</span>
+    </div>
+</div>
+

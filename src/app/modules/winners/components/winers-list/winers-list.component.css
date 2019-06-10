@@ -1,0 +1,116 @@
+.container_winers  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1170px;
+    margin: 20px auto;
+}
+
+.winner_item_container {
+    max-height: 330px;
+    overflow: hidden;
+}
+
+.overlay_carusel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 5;
+    overflow: hidden;
+}
+
+.carusel_container {
+    position: absolute;
+    width: 800px;
+    display: flex;
+    z-index: 6;
+    background-color: #fff;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carusel_pictures_container {
+    position: relative;
+    width: 70%;
+    height: 700px;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carusel_pictures_container img {
+    display: block;
+    width: 100%;
+}
+
+.close_carousel {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 8;
+    outline: none;
+    color: #fff;
+    padding: 10px 17px;
+    border: none;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.button {
+    display: none;
+    border: none;
+    color: #fff;
+    text-align: center;
+    z-index: 8;
+    height: 100%;
+    width: 50px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    outline: none;
+    transition: all ease 0.4s;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.carusel_pictures_container:hover .button {
+    display: block;
+}
+
+.picture_info {
+    margin: 0 auto;
+}
+
+.span {
+    display: inline-block;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+.name {
+    display: block;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.likes .fas, .views .fas {
+    color: #ec38bc;
+    padding-right: 5px;
+    margin-left: 10px;
+}

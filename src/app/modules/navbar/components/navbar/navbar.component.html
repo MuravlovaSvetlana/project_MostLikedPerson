@@ -1,0 +1,9 @@
+<mat-toolbar *ngIf="!isHidden">
+    <button class="notification hover" (click)="showNotification()"> Notifications </button>
+    <app-notifications class="app-notifications" *ngIf="notifIsHidden"></app-notifications>
+    <a class="profile hover" *ngIf="userId" [routerLink]="['users', authUserId || userId]">User profile</a>
+    <a [routerLink]="['/']" class="profile hover" title="Home page"><i class="fas fa-home"></i></a>
+    <a [routerLink]="['news']" class="profile hover" title="News page"><i class="fas fa-newspaper"></i></a>
+    <a [routerLink]="['winners']" class="profile hover" title="Winners page"><i class="fas fa-trophy"></i></a>
+    <a [routerLink]="['auth']" class="profile hover" title="Sign out" (click)="signOut()"><i class="fas fa-door-open"></i></a>
+</mat-toolbar>

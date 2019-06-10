@@ -1,0 +1,32 @@
+<ng-container *ngFor="let picture of item?.pictures">
+  <ng-container *ngIf="item?.pictures.length === 3">
+    <app-picture-item  class="picture_item length_3" 
+    [picture]="picture"
+    [length]="item?.pictures.length"
+    (pictureId)="showCarusel()"
+    ></app-picture-item>
+  </ng-container> 
+  <ng-container *ngIf="item?.pictures.length === 2">
+    <app-picture-item  class="picture_item length_2" 
+    [picture]="picture"
+    [length]="item?.pictures.length"
+    (pictureId)="showCarusel()"
+    ></app-picture-item>
+  </ng-container> 
+  <ng-container *ngIf="item?.pictures.length === 1">
+    <app-picture-item  class="picture_item length_1" 
+    [picture]="picture"
+    [length]="item?.pictures.length"
+    (pictureId)="showCarusel()"
+    ></app-picture-item>
+  </ng-container>
+  <ng-container *ngIf="item?.pictures.length > 3">
+    <app-picture-item  class="picture_item length" 
+    [picture]="picture"
+    [length]="item?.pictures.length"
+    (pictureId)="showCarusel()"
+    ></app-picture-item>
+  </ng-container>
+</ng-container>
+
+

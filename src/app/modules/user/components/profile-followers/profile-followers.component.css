@@ -1,0 +1,12 @@
+.container_active_tab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: hidden;
+    align-items: center;
+    margin: 0 auto;   
+}
+
+.container_follower_item {
+    width: 33.33%;
+}

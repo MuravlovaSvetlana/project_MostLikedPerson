@@ -1,0 +1,18 @@
+<div class="row container_active_tab">
+  <div class="image_container col-lg-4" *ngIf="isCurrentUser">
+    <label class="label">
+      <input
+        type="file"
+        class="upload-photos"
+        multiple
+        (change)="loadPhotos($event.target)"
+      >
+      <i class="fas fa-chevron-up"></i>
+      <i class="fas fa-camera"></i>
+      Upload new Photo
+    </label>
+  </div>  
+ <ng-container *ngFor="let image of images">
+      <app-picture-preview [image]="image" class="col-lg-4 image_container" (img)="showImg()"></app-picture-preview>
+  </ng-container>
+</div>

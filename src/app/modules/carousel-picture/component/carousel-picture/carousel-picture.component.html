@@ -1,0 +1,17 @@
+<div class="overlay_carusel">
+  <div class="carusel_container" *appCarousel="let image from carouselId; let ctrl = controller; let inf = info">
+    <button class="close_carousel" (click)="close()"><i class="fas fa-times"></i></button>
+    <div class="carusel_pictures_container">
+      <img [appImgLoader]="image">
+      <ng-container *ngIf="carouselId.length > 1">
+        <button class="button left" (click)="ctrl.prev()"><i class="fas fa-angle-left"></i></button>
+        <button class="button right" (click)="ctrl.next()"><i class="fas fa-angle-right"></i></button> 
+      </ng-container>
+    </div>
+    <div class="picture_info">
+      <span class="span name">{{inf.ownerName}}</span>
+      <span class="span likes"><i class="fas fa-heart"></i>{{inf.likes}}</span>                
+      <span class="span views"><i class="fas fa-eye"></i>{{inf.views}}</span>                
+    </div>
+  </div>
+</div>

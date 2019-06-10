@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="main-content"  [ngStyle]="{'background-image':'url(' + data?.homeBackground + ')'}">
+    <div class="inner-text">
+      <h1>Most liked Person </h1>
+      <span>Be Most Wanted</span>
+      <p [textContent]="data?.innerText"></p>
+      <button routerLink="/auth/signup">Join Us! >></button>
+    </div>
+  </div>
+  <div class="foot-content">
+    <ul>
+      <li>{{data?.cities}} Cities</li>
+      <li>{{data?.countries}} Countries</li>
+      <li>In {{data?.regions}} In The World</li>
+    </ul>
+    <p>You can be one of the winners and we will introduce you to the world</p>
+  </div>
+</div>

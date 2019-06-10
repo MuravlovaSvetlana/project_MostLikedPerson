@@ -1,0 +1,19 @@
+<app-profile-cover
+  [cover]="user?.cover || ''"
+  [isCurrentUser]="isCurrentUser"
+  (upload)="uploadCover($event)"
+></app-profile-cover>
+<div class="profile_nav">
+  <div class="container_wrap container_controls">
+      <app-profile-controls
+        [user]="user"
+        class="profile_controls"
+        [isCurrentUser]="isCurrentUser"
+        (newAvatar)="uploadAvatar($event)"
+      ></app-profile-controls>
+  </div>
+</div>
+<app-profile-tabs-container [isCurrentUser]="isCurrentUser" (updateFollowers)="updateFollowers()"></app-profile-tabs-container> 
+
+
+

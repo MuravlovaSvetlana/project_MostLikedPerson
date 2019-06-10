@@ -1,0 +1,38 @@
+.challenge {
+    width:400px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 10px 14px 22px -5px rgba(171,159,171,1);
+    position: relative;
+}
+
+.challenge-name, .challenge-foot {
+    width: 100%;
+    background-color: rgba(0,0,0,.65);
+    font-size: 16px;
+    padding: 10px 0 10px 10px;
+    display: none;
+    justify-content: space-around;
+    position: absolute;
+}
+
+.challenge-name {
+    top: 0;
+    left: 0;
+}
+
+.challenge-foot {
+    bottom: 0;
+    left: 0;
+}
+
+.challenge:hover .challenge-name, .challenge:hover .challenge-foot {
+    display: flex;
+}
+
+
+

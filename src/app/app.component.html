@@ -1,0 +1,4 @@
+<mat-progress-bar *ngIf="loadingRouteConfig | async" mode="indeterminate"></mat-progress-bar>
+<app-navbar [notifIsHidden]="notifIsHidden"></app-navbar>
+<p-toast position="bottom-right"></p-toast>
+<router-outlet></router-outlet>

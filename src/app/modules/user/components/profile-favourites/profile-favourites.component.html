@@ -1,0 +1,9 @@
+<div class="row container_active_tab">
+  <ng-container *ngFor="let image of favourites?.images">
+    <app-picture-preview 
+      [image]="image" 
+      class="col-lg-4 image_container" 
+      (img)="showImg()"
+    ></app-picture-preview>
+  </ng-container>
+</div>

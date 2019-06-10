@@ -1,0 +1,39 @@
+<div class="container-item">
+<div class="container-info">
+  <div class="author-info">
+    <div class="author-avatar">
+      <a (click)="chooseUser()">
+      <img [appImgLoader]="item?.owner.avatar || ''" alt="#">
+      </a>
+    </div>
+    <div class="author-name">
+      <span>{{item?.owner.full_name}}</span>
+    </div>
+  </div>
+  <div class="upload-info">
+    <span>Uploated {{item?.pictures.length}} photos</span>
+  </div>
+  <ng-container *ngIf="authId !== item?.owner._id">
+    <ng-container [ngSwitch]="item?._buttonText">
+        <button *ngSwitchCase="'follow'" 
+        [textContent]="item?._buttonText"
+        class="follow"
+        (click)="pressButton()"
+        >
+        </button>
+        <button *ngSwitchCase="'following'"
+        [textContent]="item?._buttonText" 
+        class="following"
+        (click)="pressButton()"
+        >
+        </button>
+      </ng-container>
+    </ng-container>
+</div>
+  <app-picture-list [item]="item"
+  (carouselItem)="carouselItem($event)"
+  (carouselImg)="carouselImg($event)"
+  class="container-pictures"
+  >
+  </app-picture-list>
+</div>

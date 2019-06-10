@@ -1,0 +1,47 @@
+<div class="profile_section">
+  <div class="profile_avatar">
+    <img [appImgLoader]="user?.avatar || null">
+  </div>
+  <div class="profile_information">
+    <span>{{user?.full_name}}</span><br>
+    <span>{{user?.country}}, {{user?.city}}</span>
+  </div>
+  <div class="profile_points">
+    <span>{{user?.rank.points}}</span><br>
+    <span>Points</span>
+  </div>
+</div>
+<div class="profile_tabs_links">
+    <nav *ngIf="user">
+        <ul class="tab-controls">
+          <li *ngFor="let item of tabList">
+            <a
+              href=""
+              [routerLink]="['/users', user._id]"
+              [queryParams]="{ tab: item.tab }"
+              [ngClass]="{ active: (activeTab | async) === item.tab }"
+            >
+              <ng-container [ngSwitch]="item.tab">
+                <ng-container *ngSwitchCase="'selfies'">
+                  {{user.my_images.length}}
+                </ng-container>
+                <ng-container *ngSwitchCase="'favourites'">
+                  {{user.favourites.length}}
+                </ng-container>
+                <ng-container *ngSwitchCase="'followers'">
+                  {{user.followers.length}}
+                </ng-container>
+                <ng-container *ngSwitchCase="'followings'">
+                  {{user.followings.length}}
+                </ng-container>
+                <ng-container *ngSwitchCase="'my_glories'">
+                  {{user.glories.length}}
+                </ng-container>
+              </ng-container><br>
+              {{ item.text }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+</div>
+

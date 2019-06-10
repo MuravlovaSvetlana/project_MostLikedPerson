@@ -1,0 +1,15 @@
+.container_active_tab {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: hidden;
+    align-items: center;
+    margin: 0 auto;   
+}
+
+.image_container {
+    height: 300px;
+    padding: 0 15px 30px 15px; 
+    background-color: #fff; 
+}

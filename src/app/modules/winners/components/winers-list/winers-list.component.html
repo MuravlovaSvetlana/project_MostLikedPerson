@@ -1,0 +1,9 @@
+<div class="container_winers">
+    <ng-container *ngFor="let winner of winners?.winners">
+        <app-winers-item [winner]="winner" class="winner_item_container" (carouselImages)="carouselImages()"></app-winers-item>
+    </ng-container>
+</div>
+<!--CAROUSEL-->
+<ng-container *ngIf="showCarousel">
+    <app-carousel-picture [carouselId]="carouselId" (closeCarousel)="closeCarousel()"></app-carousel-picture>
+</ng-container>

@@ -1,0 +1,7 @@
+<div class="notifications_header">
+  <span>Notifications</span>
+</div>
+<app-empty-list *ngIf="!notifications?.length" [text]="'There is noone notification yet…'"></app-empty-list>
+<ng-container *ngFor="let item of notifications">
+  <app-notification-item *ngIf="notifications?.length" [notification]="item"></app-notification-item>
+</ng-container>

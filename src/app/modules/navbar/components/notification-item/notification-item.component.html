@@ -1,0 +1,9 @@
+<div class="container_notification">
+  <div class="notification_avatar">
+    <img [src]="notification?.user_creator_id.avatar">
+  </div>
+  <div class="notification_information">
+    <span>{{notification?.user_creator_id.full_name}}</span><br>
+    <span>{{notification?.message}}</span>
+  </div>
+</div>
